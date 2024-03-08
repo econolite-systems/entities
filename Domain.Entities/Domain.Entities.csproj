@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<!-- SPDX-License-Identifier: MIT -->
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RootNamespace>Econolite.Ode.Domain.Entities</RootNamespace>
+		<Copyright>2023 Econolite Systems, Inc.</Copyright>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Repository.Entities\Repository.Entities.csproj" />
+	</ItemGroup>
+</Project>

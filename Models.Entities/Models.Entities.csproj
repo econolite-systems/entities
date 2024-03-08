@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<!-- SPDX-License-Identifier: MIT -->
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RootNamespace>Econolite.Ode.Models.Entities</RootNamespace>
+		<Copyright>2023 Econolite Systems, Inc.</Copyright>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)'=='DEBUG'">
+		<ProduceReferenceAssemblyInOutDir>true</ProduceReferenceAssemblyInOutDir>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove="Interfaces\" />
+		<None Remove="MongoDB.Bson" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="GeoCoordinate.NetCore" Version="1.0.0.1" />
+		<PackageReference Include="MongoDB.Bson" Version="2.18.0" />
+		<PackageReference Include="NetTopologySuite" Version="2.5.0" />
+		<PackageReference Include="NetTopologySuite.IO.GeoJSON" Version="3.0.0" />
+		<PackageReference Include="NetTopologySuite.IO.GeoJSON4STJ" Version="3.0.0" />
+		<PackageReference Include="ProjNET" Version="2.0.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="$(SolutionDir)\common\Persistence.Common\Persistence.Common.csproj" />
+		<ProjectReference Include="$(SolutionDir)\config\Config\Config.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="GeoCoordinate.NetCore">
+			<HintPath>..\..\..\..\..\..\.nuget\packages\geocoordinate.netcore\1.0.0.1\lib\netstandard1.6\GeoCoordinate.NetCore.dll</HintPath>
+		</Reference>
+		<Reference Include="NetTopologySuite">
+			<HintPath>..\..\..\..\..\..\.nuget\packages\nettopologysuite\2.5.0\lib\netstandard2.0\NetTopologySuite.dll</HintPath>
+		</Reference>
+		<Reference Include="NetTopologySuite.IO.GeoJSON">
+			<HintPath>..\..\..\..\..\..\.nuget\packages\nettopologysuite.io.geojson\2.0.4\lib\netstandard2.0\NetTopologySuite.IO.GeoJSON.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+</Project>

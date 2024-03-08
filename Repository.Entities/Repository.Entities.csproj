@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<!-- SPDX-License-Identifier: MIT -->
+	<ItemGroup>
+		<ProjectReference Include="$(SolutionDir)\common\Persistence.Mongo\Persistence.Mongo.csproj" />
+		<ProjectReference Include="..\Models.Entities\Models.Entities.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="MongoDB.Driver" Version="2.22.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Primitives" Version="7.0.0" />
+	</ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<RootNamespace>Econolite.Ode.Repository.Entities</RootNamespace>
+		<Copyright>2023 Econolite Systems, Inc.</Copyright>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)'=='DEBUG'">
+		<ProduceReferenceAssemblyInOutDir>true</ProduceReferenceAssemblyInOutDir>
+	</PropertyGroup>
+</Project>
